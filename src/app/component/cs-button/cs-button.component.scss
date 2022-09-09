@@ -1,25 +1,42 @@
 /* From uiverse.io by @Voxybuns */
 button {
-    /* Variables */
-   --button_radius: 0.4em;
-   --button_color: #FBCA1F;
-   --button_outline_color: #000000;
-   font-family: inherit;
-   font-weight: 900;
-   font-size: 18px;
-   border: 3px solid black;
-   box-shadow: 0.1em 0.1em;
-   border-radius: var(--button_radius);
-   background: var(--button_color);
-   padding: 0.6em 1.3em;
-  }
+
   
-  button:hover {
-    transform: translate(-0.05em, -0.05em);
-    box-shadow: 0.15em 0.15em;
-   }
-   
-   button:active {
-    transform: translate(0.05em, 0.05em);
-    box-shadow: 0.05em 0.05em;
-   }
+  font-family: inherit;
+  font-weight: 900;
+  font-size: 18px;
+  box-shadow: 0.1em 0.1em black;
+  padding: 0.6em 1.3em;
+}
+
+.primary {
+  /* Variables */
+  --button_radius: 0.4em;
+  --button_color: #FBCA1F;
+  --button_outline_color: #000000;
+  border: 3px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  background: var(--button_color);
+}
+
+.secondary {
+  /* Variables */
+  --button_radius: 0.4em;
+  --button_color: red;
+  --button_outline_color: #000000;
+  border: 3px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  background: var(--button_color);
+  color: #FBCA1F;
+}
+
+
+button:hover {
+  transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em black;
+}
+  
+button:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em black;
+}

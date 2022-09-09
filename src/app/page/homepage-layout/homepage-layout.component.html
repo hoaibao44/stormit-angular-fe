@@ -1,4 +1,5 @@
 <div class="container">
-    <app-cs-button (click)="btn_click()"></app-cs-button>
+    <app-cs-button (click)="btn_click()" [textString]="'hello!'"></app-cs-button>
+    <app-cs-button (click)="btn_click()" [textString]="'click me'" [btnStyle]="'secondary'"></app-cs-button>
     <p *ngIf="isClicked">Btn clicked!</p>
 </div>
