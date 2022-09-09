@@ -1,0 +1,33 @@
+.cs-card__container{
+    /* Variables */
+    --card_radius: 0.4em;
+    --card_outline_color: #000000;
+    border: 3px solid var(--card_outline_color);
+    border-radius: var(--card_radius);
+
+    font-family: inherit;
+    font-weight: 900;
+    font-size: 18px;
+    box-shadow: 0.1em 0.1em black;
+
+    min-height: 10rem;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+}
+
+.cs-card__body{
+    background-color: inherit;
+}
+
+.cs-card__header{
+    background-color: inherit;
+}
+
+.cs-card__footer{
+    display: flex;
+    justify-content: flex-end;
+    background-color: inherit;
+
+}
+

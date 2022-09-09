@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { CsButtonComponent } from '../../component/cs-button/cs-button.component'
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+
+import { gsap } from 'gsap';
+
+const plugins = [gsap];
 
 @Component({
   selector: 'app-homepage-layout',
@@ -8,15 +11,24 @@ import { CsButtonComponent } from '../../component/cs-button/cs-button.component
 })
 export class HomepageLayoutComponent implements OnInit {
 
+  @ViewChild('targetCard1') targetCard1!:ElementRef;
+
   isClicked:boolean = false;
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
   btn_click(){
-    this.isClicked = !this.isClicked
+    this.isClicked = !this.isClicked    
+    this.layerAnimation()
+  }
+
+  layerAnimation(){
+    gsap.fromTo([this.targetCard1.nativeElement],
+      {autoAlpha:0},
+      {autoAlpha:1,duration:1,stagger:0.8}
+    )
   }
 
 }

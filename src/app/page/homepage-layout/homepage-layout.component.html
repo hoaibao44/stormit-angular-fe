@@ -1,5 +1,21 @@
-<div class="container">
-    <app-cs-button (click)="btn_click()" [textString]="'hello!'"></app-cs-button>
-    <app-cs-button (click)="btn_click()" [textString]="'click me'" [btnStyle]="'secondary'"></app-cs-button>
-    <p *ngIf="isClicked">Btn clicked!</p>
+<div class="container-fluid mt-3">
+    <div class="container">
+        <app-cs-button (click)="btn_click()">Hello!</app-cs-button>
+        <app-cs-button class="ms-3" (click)="btn_click()" [btnStyle]="'secondary'">Click Me</app-cs-button>
+    </div>
+    <div class="container mt-3" #targetCard1>
+        <app-cs-card class=" mw-25" *ngIf="isClicked">
+            <app-cs-card-header class="p-3 bg-dark text-white">header here!</app-cs-card-header>
+            <app-cs-card-body class="p-3">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae temporibus
+                similique iure
+                ratione voluptate, dolor expedita quidem atque dignissimos nobis repellendus accusantium reiciendis
+                porro tenetur quam suscipit at quod ipsum!
+            </app-cs-card-body>
+            <app-cs-card-footer class="p-3">
+                <app-cs-button class="ms-3" (click)="btn_click()" [btnStyle]="'secondary'">Close!</app-cs-button>
+            </app-cs-card-footer>
+        </app-cs-card>
+    </div>
+
 </div>
